@@ -8,8 +8,7 @@ from plxscripting.easy import *
 @st.cache
 def check_connection(ip,localhostport_input,password):
     s,g = new_server(ip, localhostport_input, password=password)
-    # return(s.active)
-    return(s,g,s.active)
+    return(s.active)
 
     
 
@@ -103,7 +102,7 @@ def page2():
         #     # g.line(0,0,0,2,4,6)
         #     status=1
         
-        s,g,status=check_connection(ip,localhostport_input,password)    
+        status=check_connection(ip,localhostport_input,password)    
              
         if status==True:
             st.sidebar.write(" PLX Remote Scrip. Connection status : 🟢")

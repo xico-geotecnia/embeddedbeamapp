@@ -103,7 +103,7 @@ def page2():
         #     status=1
         
         # status=check_connection(ip,localhostport_input,password)    
-             
+        status=True   
         if status==True:
             # st.sidebar.write(" PLX Remote Scrip. Connection status : 🟢")
             st.sidebar.markdown("## Basic input information")

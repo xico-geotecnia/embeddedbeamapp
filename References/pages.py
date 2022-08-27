@@ -125,7 +125,7 @@ def page2():
         
                     if len(password) !=0 and uploaded_file is not None and len(ip) !=0:
                        if st.sidebar.button('Click here to generate the embedded beam elements in PLAXIS!'):
-                           s,g = new_server(ip, localhostport_input, password=password)
+                           # s,g = new_server(ip, localhostport_input, password=password)
                            count=0
                            for i in range(0,len(df)):
                             count=count+1

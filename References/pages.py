@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 import streamlit as st
-from streamlit_tags import st_tags
-from streamlit_tags import st_tags_sidebar
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

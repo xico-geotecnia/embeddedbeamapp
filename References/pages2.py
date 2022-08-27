@@ -8,7 +8,7 @@ from plxscripting.easy import *
 @st.cache
 def check_connection(ip,localhostport_input,password):
     s,g = new_server(ip, localhostport_input, password=password)
-    return(s.active)
+    return(s,g,s.active)
 
     
 

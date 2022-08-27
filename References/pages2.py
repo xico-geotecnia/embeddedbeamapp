@@ -97,15 +97,14 @@ def page2():
     if len(password) !=0  and len(ip) !=0:
         # if st.sidebar.button('Establish connection between app and PLAXIS Remote Scripting'):    
         # try:
-        # s,g = new_server(ip, localhostport_input, password=password)
         # if s.active==True:
         #     # g.line(0,0,0,2,4,6)
         #     status=1
         
-        # status=check_connection(ip,localhostport_input,password)    
-        status=True   
+        s,g,status=check_connection(ip,localhostport_input,password)    
+             
         if status==True:
-            # st.sidebar.write(" PLX Remote Scrip. Connection status : 🟢")
+            st.sidebar.write(" PLX Remote Scrip. Connection status : 🟢")
             st.sidebar.markdown("## Basic input information")
             uploaded_file = st.sidebar.file_uploader("Import Pile schedule data as xlsx file")
             if uploaded_file is not None:
@@ -125,7 +124,6 @@ def page2():
         
                     if len(password) !=0 and uploaded_file is not None and len(ip) !=0:
                        if st.sidebar.button('Click here to generate the embedded beam elements in PLAXIS!'):
-                           s,g = new_server(ip, localhostport_input, password=password)
                            count=0
                            for i in range(0,len(df)):
                             count=count+1
@@ -145,7 +143,6 @@ def page2():
                                 continue
                             
                             g.embeddedbeam (x_pile,y_pile,top_pile,x_pile,y_pile,toe_pile)
-                            g.Lines[-1].Name=name
                             g.Lines[-1].EmbeddedBeam.Material=materialplx
                 else:
                     st.markdown("### ❌❌❌Import columns format is not correct!!") 

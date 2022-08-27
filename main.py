@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from streamlit_tags import st_tags
 from streamlit_tags import st_tags_sidebar
-from References.pages import main_page,page2
+from References.pages2 import main_page,page2
 
 st.set_page_config(layout="wide")
     

@@ -97,6 +97,7 @@ def page2():
     if len(password) !=0  and len(ip) !=0:
         # if st.sidebar.button('Establish connection between app and PLAXIS Remote Scripting'):    
         # try:
+        s,g = new_server(ip, localhostport_input, password=password)
         # if s.active==True:
         #     # g.line(0,0,0,2,4,6)
         #     status=1
@@ -124,8 +125,8 @@ def page2():
         
                     if len(password) !=0 and uploaded_file is not None and len(ip) !=0:
                        if st.sidebar.button('Click here to generate the embedded beam elements in PLAXIS!'):
-                           count=0
                            s,g = new_server(ip, localhostport_input, password=password)
+                           count=0
                            for i in range(0,len(df)):
                             count=count+1
                             name=df.loc[i,"Pile Name"]

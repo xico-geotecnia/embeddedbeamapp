@@ -126,11 +126,9 @@ def page2():
                     if len(password) !=0 and uploaded_file is not None and len(ip) !=0:
                        if st.sidebar.button('Click here to generate the embedded beam elements in PLAXIS!'):
                            s,g = new_server(ip, localhostport_input, password=password)
-                           count=0
                            for i in range(0,len(df)):
-                            count=count+1
                             name=df.loc[i,"Pile Name"]
-                            print(name)
+                            st.write("Modelling {}".format(name))
                             x_pile=df.loc[i,"x (m)"]
                             y_pile=df.loc[i,"y (m)"]
                             top_pile=df.loc[i,"Top (m)"]

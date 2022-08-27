@@ -8,7 +8,8 @@ from plxscripting.easy import *
 @st.cache
 def check_connection(ip,localhostport_input,password):
     s,g = new_server(ip, localhostport_input, password=password)
-    return(s.active)
+    # return(s.active)
+    return(s,g,s.active)
 
     
 
@@ -97,12 +98,12 @@ def page2():
     if len(password) !=0  and len(ip) !=0:
         # if st.sidebar.button('Establish connection between app and PLAXIS Remote Scripting'):    
         # try:
-        s,g = new_server(ip, localhostport_input, password=password)
+        # s,g = new_server(ip, localhostport_input, password=password)
         # if s.active==True:
         #     # g.line(0,0,0,2,4,6)
         #     status=1
         
-        status=check_connection(ip,localhostport_input,password)    
+        s,g,status=check_connection(ip,localhostport_input,password)    
              
         if status==True:
             st.sidebar.write(" PLX Remote Scrip. Connection status : 🟢")
@@ -145,6 +146,7 @@ def page2():
                                 continue
                             
                             g.embeddedbeam (x_pile,y_pile,top_pile,x_pile,y_pile,toe_pile)
+                            g.Lines[-1].Name=name
                             g.Lines[-1].EmbeddedBeam.Material=materialplx
                 else:
                     st.markdown("### ❌❌❌Import columns format is not correct!!") 

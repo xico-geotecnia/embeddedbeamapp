@@ -143,6 +143,7 @@ def page2():
                                 continue
                             
                             g.embeddedbeam (x_pile,y_pile,top_pile,x_pile,y_pile,toe_pile)
+                            g.Lines[-1].Name=name
                             g.Lines[-1].EmbeddedBeam.Material=materialplx
                 else:
                     st.markdown("### ❌❌❌Import columns format is not correct!!") 

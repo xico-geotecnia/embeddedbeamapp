@@ -1,6 +1,7 @@
 streamlit
 pandas
 numpy
+streamlit_tags
 matplotlib
 seaborn
 pycryptodome

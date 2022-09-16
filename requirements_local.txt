@@ -5,5 +5,5 @@ streamlit_tags
 matplotlib
 seaborn
 pycryptodome
-git+https://github.com/marquez85/plxscripting.git
-git+https://github.com/marquez85/encryption.git
+git+https://github.com/xico-geotecnia/plxscripting.git
+git+https://github.com/xico-geotecnia/encryption.git

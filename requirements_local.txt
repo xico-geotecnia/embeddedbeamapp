@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+streamlit_tags
+matplotlib
+seaborn
+pycryptodome
+git+https://github.com/marquez85/plxscripting.git
+git+https://github.com/marquez85/encryption.git
